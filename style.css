@@ -1,0 +1,190 @@
+
+/* General website styling */
+body {
+    background-color: #f4f1ff;
+    color: #333344;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Website header */
+header {
+    background-color: #a5a6f6;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 5px solid #7778c8;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Navigation menu using Flexbox */
+nav {
+    background-color: #dedcff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+}
+
+nav a {
+    color: #35356b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #8586d8;
+    color: white;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #dedcff;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #6869b8;
+}
+
+/* List styling */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #dedcff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid #a5a6f6;
+}
+
+footer a {
+    color: #35356b;
+}
+
+footer a:hover {
+    color: #6869b8;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th {
+    background-color: #a5a6f6;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #dedcff;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f4f1ff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Key concept cards */
+section {
+    background-color: #f8f7ff;
+    border: 1px solid #dedcff;
+    border-left: 5px solid #a5a6f6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+section:hover {
+    background-color: #eeecff;
+}
+
+/* Links inside main content */
+main a {
+    color: #5859ad;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Link hover effect */
+main a:hover {
+    color: #30317d;
+}
+
+/* Spacing for reference descriptions */
+main li p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555566;
+}
+
+/* Historical website image */
+figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #a5a6f6;
+    border-radius: 10px;
+}
+
+figcaption {
+    color: #555566;
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
