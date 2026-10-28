@@ -188,3 +188,202 @@ figcaption {
     font-style: italic;
 }
 
+
+/* =========================================
+   Milestone 2 - Quiz Styles
+   ========================================= */
+
+/* Main quiz layout */
+.quiz-container {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.quiz-intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Countdown timer */
+#timer {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #6861a8;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 16px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Final-minute warning */
+#timer.timer-warning {
+    background-color: #bd354c;
+}
+
+/* Individual questions */
+#quiz-form fieldset {
+    border: 1px solid #d3cee9;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 22px;
+    background-color: #f7f5ff;
+    color: #29243d;
+}
+
+/* Question titles */
+#quiz-form legend {
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #39316c;
+    padding: 5px;
+}
+
+/* Answer choices */
+#quiz-form label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+/* Radio buttons and checkboxes */
+#quiz-form input[type="radio"],
+#quiz-form input[type="checkbox"] {
+    accent-color: #6861a8;
+    margin-right: 9px;
+    transform: scale(1.15);
+}
+
+/* Text answers and dropdowns */
+#quiz-form input[type="text"],
+#quiz-form select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #aaa4cf;
+    border-radius: 7px;
+    background-color: white;
+    color: #29243d;
+    font-size: 1rem;
+}
+
+/* Keyboard accessibility */
+#quiz-form input:focus-visible,
+#quiz-form select:focus-visible,
+#submit-btn:focus-visible,
+#retake-btn:focus-visible {
+    outline: 3px solid #5149a4;
+    outline-offset: 3px;
+}
+
+/* Quiz buttons */
+#submit-btn,
+#retake-btn {
+    display: block;
+    width: min(100%, 300px);
+    margin: 25px auto;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 9px;
+    background-color: #6861a8;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#submit-btn:hover,
+#retake-btn:hover {
+    background-color: #4b447f;
+}
+
+/* Results section */
+#results {
+    margin-top: 35px;
+}
+
+#results[hidden] {
+    display: none;
+}
+
+.score-summary {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    background-color: #f4f1ff;
+    color: #29243d;
+}
+
+/* Final percentage */
+.final-score {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.pass-status {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Passing and failing styles */
+.score-summary.passed {
+    border: 3px solid #32805c;
+}
+
+.score-summary.failed {
+    border: 3px solid #b33c4d;
+}
+
+/* Individual question feedback */
+.question-result {
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 9px;
+    color: #29243d;
+}
+
+.question-result.correct {
+    background-color: #e5f5ea;
+    border-left: 5px solid #32805c;
+}
+
+.question-result.incorrect {
+    background-color: #fce8ea;
+    border-left: 5px solid #b33c4d;
+}
+
+.question-result h3 {
+    margin-top: 0;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    #quiz-form fieldset {
+        padding: 15px;
+    }
+
+    #timer {
+        font-size: 1.15rem;
+    }
+
+    .final-score {
+        font-size: 2.5rem;
+    }
+}
