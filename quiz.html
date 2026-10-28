@@ -7,243 +7,153 @@
     <title>Web Design Evolution Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Web Design Evolution Quiz</h1>
-        <p>Test your knowledge of web design history!</p>
-    </header>
+<header>
+    <h1>Web Design Evolution Quiz</h1>
+    <p>Test your knowledge of web design history!</p>
+</header>
 
-    <!-- Main Navigation -->
+<!-- Navigation shared with the rest of the website -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="1990s.html">The 1990s</a>
+    <a href="2000s.html">The 2000s</a>
+    <a href="modern.html">Modern Web</a>
+    <a href="concepts.html">Key Concepts</a>
+    <a href="references.html">References</a>
+    <a href="about.html">About</a>
+    <a href="quiz.html" aria-current="page">Take the Quiz</a>
+</nav>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="1990s.html">The 1990s</a>
-        <a href="2000s.html">The 2000s</a>
-        <a href="modern.html">Modern Web</a>
-        <a href="concepts.html">Key Concepts</a>
-        <a href="references.html">References</a>
-        <a href="about.html">About</a>
-        <a href="quiz.html">Take the Quiz</a>
-    </nav>
+<main class="quiz-container">
 
-    <main>
-        <section>
-            <h2>How Much Do You Know?</h2>
-            <p>
-                You have 10 minutes to answer 10 questions
-                about the evolution of web design.
-            </p>
-        </section>
-        
-<!-- Quiz questions -->
-<section id="quiz-section">
-    <h2>Quiz Questions</h2>
+    <section class="quiz-intro">
+        <h2>How Much Do You Know?</h2>
+        <p>
+            Answer 10 questions about the evolution of web design.
+            You have 10 minutes to finish.
+        </p>
+        <p>
+            Each question is worth one point.
+            A score of 70% or higher is passing.
+        </p>
+    </section>
 
-    <form id="quiz-form">
+    <!-- JavaScript updates the countdown -->
+    <div id="timer" role="timer" aria-live="off">
+        Time Remaining: 10:00
+    </div>
 
-        <!-- Question 1 -->
-        <fieldset>
-            <legend>1. What was a common feature of websites in the 1990s?</legend>
+    <section id="quiz-section">
+        <h2>Quiz Questions</h2>
 
-            <label>
-                <input type="radio" name="q1" value="a">
-                Responsive layouts
-            </label>
+        <form id="quiz-form">
 
-            <label>
-                <input type="radio" name="q1" value="b">
-                Flashing text and animated GIFs
-            </label>
+            <!-- Question 1: Multiple choice -->
+            <fieldset>
+                <legend>1. What was a common feature of websites in the 1990s?</legend>
+                <label><input type="radio" name="q1" value="a"> Responsive layouts</label>
+                <label><input type="radio" name="q1" value="b"> Flashing text and animated GIFs</label>
+                <label><input type="radio" name="q1" value="c"> Mobile-first design</label>
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q1" value="c">
-                Mobile-first design
-            </label>
-        </fieldset>
+            <!-- Question 2: Multiple choice -->
+            <fieldset>
+                <legend>2. What technology is primarily used to style web pages?</legend>
+                <label><input type="radio" name="q2" value="a"> HTML</label>
+                <label><input type="radio" name="q2" value="b"> SQL</label>
+                <label><input type="radio" name="q2" value="c"> CSS</label>
+            </fieldset>
 
-        <!-- Question 2 -->
-        <fieldset>
-            <legend>2. What technology is primarily used to style web pages?</legend>
+            <!-- Question 3: Multiple choice -->
+            <fieldset>
+                <legend>3. What does responsive web design allow a website to do?</legend>
+                <label><input type="radio" name="q3" value="a"> Adapt its layout to different screen sizes</label>
+                <label><input type="radio" name="q3" value="b"> Automatically create new web pages</label>
+                <label><input type="radio" name="q3" value="c"> Work without an internet connection</label>
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q2" value="a">
-                HTML
-            </label>
+            <!-- Question 4: Fill in the blank -->
+            <fieldset>
+                <legend>4. What does HTML stand for?</legend>
+                <label for="q4">Your answer:</label>
+                <input type="text" id="q4" name="q4" placeholder="Enter your answer" autocomplete="off">
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q2" value="b">
-                SQL
-            </label>
+            <!-- Question 5: Fill in the blank -->
+            <fieldset>
+                <legend>5. What programming language is commonly used to make web pages interactive?</legend>
+                <label for="q5">Your answer:</label>
+                <input type="text" id="q5" name="q5" placeholder="Enter your answer" autocomplete="off">
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q2" value="c">
-                CSS
-            </label>
-        </fieldset>
+            <!-- Question 6: Multiple selection -->
+            <fieldset>
+                <legend>6. Which are common features of modern web design? Select all that apply.</legend>
+                <label><input type="checkbox" name="q6" value="a"> Responsive layouts</label>
+                <label><input type="checkbox" name="q6" value="b"> Mobile-friendly navigation</label>
+                <label><input type="checkbox" name="q6" value="c"> Mandatory flashing text</label>
+                <label><input type="checkbox" name="q6" value="d"> Accessibility features</label>
+            </fieldset>
 
-        <!-- Question 3 -->
-        <fieldset>
-            <legend>3. What does responsive web design allow a website to do?</legend>
+            <!-- Question 7: Dropdown -->
+            <fieldset>
+                <legend>7. Which technology structures webpage content?</legend>
+                <label for="q7">Choose your answer:</label>
+                <select id="q7" name="q7">
+                    <option value="">Select an answer</option>
+                    <option value="a">CSS</option>
+                    <option value="b">HTML</option>
+                    <option value="c">JavaScript</option>
+                </select>
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q3" value="a">
-                Adapt its layout to different screen sizes
-            </label>
+            <!-- Question 8: Multiple choice -->
+            <fieldset>
+                <legend>8. Which decade saw the rise of Web 2.0 and social media platforms?</legend>
+                <label><input type="radio" name="q8" value="a"> 1980s</label>
+                <label><input type="radio" name="q8" value="b"> 2000s</label>
+                <label><input type="radio" name="q8" value="c"> 2020s</label>
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q3" value="b">
-                Automatically create new web pages
-            </label>
+            <!-- Question 9: Multiple choice -->
+            <fieldset>
+                <legend>9. What is the primary purpose of CSS?</legend>
+                <label><input type="radio" name="q9" value="a"> Store website data</label>
+                <label><input type="radio" name="q9" value="b"> Control visual appearance and layout</label>
+                <label><input type="radio" name="q9" value="c"> Create server databases</label>
+            </fieldset>
 
-            <label>
-                <input type="radio" name="q3" value="c">
-                Work without an internet connection
-            </label>
-        </fieldset>
+            <!-- Question 10: Multiple choice -->
+            <fieldset>
+                <legend>10. Which approach prioritizes smaller screens first?</legend>
+                <label><input type="radio" name="q10" value="a"> Desktop-first design</label>
+                <label><input type="radio" name="q10" value="b"> Fixed-width design</label>
+                <label><input type="radio" name="q10" value="c"> Mobile-first design</label>
+            </fieldset>
 
-<!-- Question 4 -->
-<fieldset>
-    <legend>4. What does HTML stand for?</legend>
+            <button type="submit" id="submit-btn">
+                Submit Quiz
+            </button>
 
-    <label for="q4">Your answer:</label>
-    <input
-        type="text"
-        id="q4"
-        name="q4"
-        placeholder="Type your answer here"
-    >
-</fieldset>
+        </form>
+    </section>
 
-<!-- Question 5 -->
-<fieldset>
-    <legend>5. What programming language is commonly used to make web pages interactive?</legend>
+    <!-- Score and question feedback appear here -->
+    <section id="results" aria-live="polite" hidden></section>
 
-    <label for="q5">Your answer:</label>
-    <input
-        type="text"
-        id="q5"
-        name="q5"
-        placeholder="Type your answer here"
-    >
-</fieldset>
+</main>
 
-<!-- Question 6 -->
-<fieldset>
-    <legend>
-        6. Which of the following are common features
-        of modern web design? (Select all that apply.)
-    </legend>
+<footer>
+    <p>
+        Created for
+        <a href="https://ksuweb.github.io/IT3203/">
+            IT 3203 Web Development
+        </a>
+    </p>
+</footer>
 
-    <label>
-        <input type="checkbox" name="q6" value="a">
-        Responsive layouts
-    </label>
-
-    <label>
-        <input type="checkbox" name="q6" value="b">
-        Mobile-friendly navigation
-    </label>
-
-    <label>
-        <input type="checkbox" name="q6" value="c">
-        Mandatory flashing text
-    </label>
-
-    <label>
-        <input type="checkbox" name="q6" value="d">
-        Accessibility features
-    </label>
-</fieldset>
-
-<!-- Question 7 -->
-<fieldset>
-    <legend>7. Which technology is used to structure the content of a webpage?</legend>
-
-    <label for="q7">Choose your answer:</label>
-    <select id="q7" name="q7">
-        <option value="">Select an answer</option>
-        <option value="a">CSS</option>
-        <option value="b">HTML</option>
-        <option value="c">JavaScript</option>
-    </select>
-</fieldset>
-
-<!-- Question 8 -->
-<fieldset>
-    <legend>8. Which decade saw the rise of Web 2.0 and social media platforms?</legend>
-
-    <label>
-        <input type="radio" name="q8" value="a">
-        1980s
-    </label>
-
-    <label>
-        <input type="radio" name="q8" value="b">
-        2000s
-    </label>
-
-    <label>
-        <input type="radio" name="q8" value="c">
-        2020s
-    </label>
-</fieldset>
-
-<!-- Question 9 -->
-<fieldset>
-    <legend>9. What is the primary purpose of CSS in web design?</legend>
-
-    <label>
-        <input type="radio" name="q9" value="a">
-        Store website data
-    </label>
-
-    <label>
-        <input type="radio" name="q9" value="b">
-        Control the visual appearance and layout
-    </label>
-
-    <label>
-        <input type="radio" name="q9" value="c">
-        Create server databases
-    </label>
-</fieldset>
-
-<!-- Question 10 -->
-<fieldset>
-    <legend>10. Which design approach prioritizes smaller screens first?</legend>
-
-    <label>
-        <input type="radio" name="q10" value="a">
-        Desktop-first design
-    </label>
-
-    <label>
-        <input type="radio" name="q10" value="b">
-        Fixed-width design
-    </label>
-
-    <label>
-        <input type="radio" name="q10" value="c">
-        Mobile-first design
-    </label>
-</fieldset>
-
-<!-- Button to submit quiz answers -->
-<button type="submit" id="submit-btn">
-    Submit Quiz
-</button>
-
-    </form>
-</section>
-
-<!-- Quiz results will appear here -->
-<section id="results" aria-live="polite" hidden></section>
-
-    </main>
-
-<!-- Connect the JavaScript quiz functionality -->
 <script src="script.js"></script>
 
 </body>
